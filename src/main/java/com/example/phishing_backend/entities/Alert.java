@@ -28,6 +28,5 @@ public class Alert {
     @JoinColumn(name = "user_id")
     private User user;
 
-    // getters and setters
 }
 
