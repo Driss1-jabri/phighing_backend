@@ -1,9 +1,16 @@
 package com.example.phishing_backend.entities;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+
 public class Email {
 
     @Id
@@ -11,7 +18,6 @@ public class Email {
     private Long id;
     private String subject;
     private String sender;
-    @Lob
     private String body;
     private boolean isPhishing;
 
