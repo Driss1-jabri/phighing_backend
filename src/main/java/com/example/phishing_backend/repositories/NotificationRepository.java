@@ -1,0 +1,9 @@
+package com.example.phishing_backend.repositories;
+import com.example.phishing_backend.entities.Notification;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface NotificationRepository extends JpaRepository<Notification, Long> {
+    List<Notification> findByUserId(Long userId);
+}
